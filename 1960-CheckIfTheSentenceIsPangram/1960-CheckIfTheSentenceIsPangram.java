@@ -1,0 +1,16 @@
+// Last updated: 8/12/2026, 11:11:57 AM
+class Solution {
+    public boolean checkIfPangram(String sentence) {
+        int freq[]=new int[26];
+        for(int i=0;i<sentence.length();i++){
+            char ch=sentence.charAt(i);
+            freq[ch-'a']++;
+        }
+        for(int i=0;i<26;i++){
+            if(freq[i]==0){
+                return false;
+            }
+        }
+        return true;
+    }
+}
